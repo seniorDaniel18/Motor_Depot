@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Renault Magnum",
+    "status": "BASE"
+  },
+  {
+    "id": 2,
+    "name": "Volvo",
+    "status": "BASE"
+  },
+  {
+    "id": 3,
+    "name": "DAF XT",
+    "status": "BASE"
+  }
+]
