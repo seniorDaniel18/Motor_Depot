@@ -8,6 +8,7 @@ import java.nio.file.Paths;
 
 import static com.peaksoft.JsonUtils.*;
 import static com.peaksoft.Truck.printInfoTrack;
+import static com.peaksoft.TruckService.changeTruck;
 
 public class Main {
     public static final GsonBuilder BUILDER = new GsonBuilder();
@@ -17,9 +18,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Truck[] trucks = {Truck.createTruck(1, "Renault Magnum", null, Status.BASE),
-                Truck.createTruck(2, "Volvo", null, Status.BASE),
-                Truck.createTruck(3, "DAF XT", null, Status.BASE)};
+        Truck[] trucks = {Truck.createTruck(1, "Renault Magnum", " ", Status.BASE),
+                Truck.createTruck(2, "Volvo", " ", Status.BASE),
+                Truck.createTruck(3, "DAF XT", " ", Status.BASE)};
 
         Driver[] drivers = {Driver.createDriver(1, "Petr", ""),
                 Driver.createDriver(2, "Askar", ""),
@@ -34,6 +35,8 @@ public class Main {
         printInfoTrack(PATH_TRUCK);
         Driver[] driver = gson.fromJson(readFile(PATH_DRIVER), Driver[].class);
         Driver.printInfoDriver(PATH_DRIVER);
+
+        changeTruck(trucks, 1, drivers);
 
 
 

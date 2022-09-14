@@ -48,15 +48,15 @@ public class Driver {
 
    public static void printInfoDriver(Path path) {
        System.out.println("\n\t INFO ABOUT DRIVERS\n" +
-               "---------------------------------------");
+               "-----------------------------");
        System.out.printf("%-1s%-10s%-20s%n", "#", "| Driver", "| Bus");
        Driver[] driver = gson.fromJson(readFile(path), Driver[].class);
-       System.out.println("---------------------------------------");
+       System.out.println("-----------------------------");
        for(Driver drive : driver) {
            System.out.printf("%-1s", drive.getId());
            System.out.printf("| %-8s", drive.getName());
            System.out.printf("| %-18s", drive.getTruck());
-           System.out.println("\n---------------------------------------");
+           System.out.println("\n-----------------------------");
        }
    }
 }
